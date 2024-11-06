@@ -23,27 +23,22 @@ class Program
 
 using System;
 
+namespace ConsoleApp;
+
 class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Enter a Value: ");
-        string input = Console.ReadLine();
-        
-        if (int.TryParse(input, out int number))
+        Console.WriteLine("Enter an interger: ");
+        int userInput = Convert.ToInt32(Console.ReadLine());
+        int num = 2;
+
+        if (userInput  % num == 0)
         {
-            if (number % 2 == 0)
-            {
-                Console.WriteLine("Even");
-            }
-            else
-            {
-                Console.WriteLine("Odd");
-            }
-        }
-        else
+            Console.WriteLine("Even");
+        } else
         {
-            Console.WriteLine("Invalid input. Please enter a valid number.");
+            Console.WriteLine("Odd");
         }
     }
 }
@@ -57,10 +52,14 @@ class Program
 {
     static void Main(string[] args)
     {
+        int total = 0;
         for (int i = 1; i <= 10; i++)
         {
             Console.WriteLine(i);
+            total += i;
         }
+
+        Console.WriteLine($"Sum of all values: {total}");
     }
 }
 
@@ -87,6 +86,23 @@ class Program
     }
 }
 
+using System;
+
+namespace ConsoleApp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] intArrayNumber = { 2, 4, 6, 8, 10 };
+
+        foreach (int i in intArrayNumber)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+
 
 // Task 5:
 // Write a method named Greet that takes a string parameter name and prints out a personalized greeting message.
@@ -95,28 +111,14 @@ using System;
 
 class Program
 {
+    static void Greet(string name)
+    {
+        Console.WriteLine($"Hello, {name}!");
+    }
     static void Main(string[] args)
     {
         Greet("Alice");
     }
 
-    static void Greet(string name)
-    {
-        Console.WriteLine($"Hello, {name}!");
-    }
 }
 
-
-
-
-using System;
-names HelloWorld
-{
-    class Program
-    {
-        static void Main(string[]args)
-        {
-            Console.WriteLine("Hello Worlds")
-        }
-    }
-}
